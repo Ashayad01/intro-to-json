@@ -72,7 +72,7 @@ function displayPhotos(json){
 function getUsers(data){
     console.log('This is our user data from the file: ', data);
     // TO DO - ADD USER INFO TO PAGE
-    const outputDiv = document.getElementById("user");
+    const outputDiv = document.getElementById("users");
 
     let output = "";
 
@@ -84,9 +84,9 @@ function getUsers(data){
             <section>
                 <h3>${user.name.first} ${user.name.last}</h3>
                 <p>Username: ${user.login.username}</p>
-                <img scr="${user.picture.large}" alt="" width="160" height="160">
+                <img src="${user.picture.large}" alt="" width="160" height="160">
                 <p>Birthday: ${birthday.getMonth() + 1}-${birthday.getDate()}-${birthday.getFullYear()}</p>
-                <a href="mailto: ${user.email}">${user.email}</a>
+                <a href="mailto:${user.email}">${user.email}</a>
             </section>
         `;
     }
